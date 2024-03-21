@@ -7,44 +7,71 @@
     <title>Task App</title>
 </head>
 <style>
-    table,tr,td{
-        border: 1px solid black;
+    * {
+        margin: 0px;
+        padding: 0px;
     }
-    #add-task{
-        background-color:green;
+
+    html {
+        height: 100vh;
     }
-    .box{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        justify-self:center;
-        margin:10px;
-    }
-    table{
+
+    table {
         width: 400px;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+        border: 1px solid #000;
+    }
+
+    #add-task {
+        background-color: #ff0000;
+        color: #fff;
+        border-right: 50px;
+        padding: 20px;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin: 10px;
+    }
+    .table-box {
+        height: 100vh;
     }
 </style>
 
-<body></body>
-    <div>
-        <input name="task-name" id="Task-name" placeholder="New Task" />
-        <button id="add-t">Add task</button>
-</body>
-<table>
-<tr>
-    <th>Task Name</th>
-    <th>Done</th>
-    <th>Delete</th>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
-</div>
+<body>
+    <div class="box task-box">
+        <input name="task-name" id="task-name" placeholder="New Task" />
+        <button id="add-task">Add Task</button>
+    </div>
+    <div class="box table-box">
+        <table>
+            <tr>
+                <th>Task Name</th>
+                <th>Done</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 </body>
 <script>
-    let button =document.getElementsById("add-task")
-button
+    let button = document.getElementById("add-task");
+    button.addEventListener("click", function( ) {
+        localStorage.setItem("task", "task yha aayega input se")
+    })
+
+</script>
+
 </html>
