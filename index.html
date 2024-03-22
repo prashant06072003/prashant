@@ -49,7 +49,7 @@
 <body>
     <div class="box task-box">
         <input name="task-name" id="task-name" placeholder="New Task" />
-        <button id="add-task">Add Task</button>
+        <button id="add-task">Add task</button>
     </div>
     <div class="box table-box">
         <table>
@@ -68,9 +68,34 @@
 </body>
 <script>
     let button = document.getElementById("add-task");
+    let input = document.getElementsById("task-name");
+    let inputValue;
+    let task=[];
+    let table =document.querySelector('tbody')
+    let completeTask = document.querySelectorAll('.complete-task')
+
+    function addTask()
+    {
+        console.log(input.value)
+        task.pushpush(inputValue)
+    }
+    allTasks['task$(task.length)']=inputvalue;
     button.addEventListener("click", function( ) {
-        localStorage.setItem("task", "task yha aayega input se")
+        localStorage.setItem("allTasks",JSON.stringfy(task))
+        localStorage.setItem("taskNumber",task.length)
+        table.insertAdjacementHTML("beforend")
     })
+    console.log(table)
+    table.append('
+    <tr>
+        <td>${inputValue}</td>
+        <td></button>Complete</button></td>
+        <td><button>Delete</button><td>
+        </tr>
+    )
+    })
+    let storeData = localStorage.getItem
+    console.log(table)
 
 </script>
 
